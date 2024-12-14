@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+main {
+    max-width: 1200px;  /* Increased to accommodate the side nav */
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;  /* Split into two columns */
+    gap: 2rem;
+}
+
+#what p {
+    margin-bottom: 10px;  /* Reduce space between paragraph and list */
+}
+
+#what ul {
+    margin-top: 0;        /* Remove top margin of the list */
+    margin-bottom: 0;     /* Remove bottom margin of the list */
+}
+
+#what li {
+    margin-bottom: 5px;   /* Reduce space between list items */
+}
+
+/* Remove margin from last list item to prevent extra space at bottom */
+#what li:last-child {
+    margin-bottom: 0;
+}
+
+section p {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 2rem 0 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 4rem;
+}
+
+.details-group h3 {
+    margin-bottom: 10px;  /* Reduce space between subheading and list */
+}
+
+.details-group ul {
+    margin-top: 0;        /* Remove top margin of the list */
+    margin-bottom: 20px;  /* Space between different detail groups */
+}
+
+.details-group li {
+    margin-bottom: 5px;   /* Reduce space between list items */
+}
+
+/* Remove margin from last list item */
+.details-group li:last-child {
+    margin-bottom: 0;
+}
+.directory {
+    margin: 4rem 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0rem;
+    padding-left: 8rem;  /* Aligns with main heading */
+}
+
+section ul {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 2.5rem;
+    list-style: none;  /* Removes default bullets */
+}
+
+section ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+section ul li:before {
+    content: "•";  /* Custom bullet point */
+    position: absolute;
+    left: 0;
+}
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    padding-left: 0.5rem;
+}
+
+.details-group {
+    margin-bottom: 2.5rem;
+}
+
+.details-group h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.details-group ul {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+.details-group ul li {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.details-group ul li:before {
+    content: "•";
+    position: absolute;
+    left: -1.5rem;
+}
+
+section {
+    margin: 6rem 0;
+}
+
+section h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+/* Common styling for all bullet lists */
+section ul, .details-group ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+section ul li, .details-group ul li {
+    margin-bottom: 5px;  /* Consistent spacing between list items */
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+section ul li:before, .details-group ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+/* Remove margin from last items */
+section ul li:last-child, .details-group ul li:last-child {
+    margin-bottom: 0;
+}
+
+section ul li, .details-group ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+section ul li:before, .details-group ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+/* Remove any existing margin-left from lists */
+section ul, .details-group ul {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .nav-links {
+        padding-top: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
